@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "d61a8042-7004-4088-adec-103b188c7094",
+		"name": "Cidenet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees?first_name=&other_names=&surname=&second_surname=&identification_type_id=&identification_number=&country_id=&email=&status=active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": ""
+						},
+						{
+							"key": "other_names",
+							"value": ""
+						},
+						{
+							"key": "surname",
+							"value": ""
+						},
+						{
+							"key": "second_surname",
+							"value": ""
+						},
+						{
+							"key": "identification_type_id",
+							"value": ""
+						},
+						{
+							"key": "identification_number",
+							"value": ""
+						},
+						{
+							"key": "country_id",
+							"value": ""
+						},
+						{
+							"key": "email",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/:employee_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						":employee_id"
+					],
+					"variable": [
+						{
+							"key": "employee_id",
+							"value": "42"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification_type_id\": 2,\r\n    \"area_id\": 7,\r\n    \"surname\": \"OSA\",\r\n    \"second_surname\": \"FERNANDEZ\",\r\n    \"first_name\": \"MARCIA\",\r\n    \"other_names\": \"YOLANDA\",\r\n    \"identification_number\": \"453279523\",\r\n    \"country_id\": 2,\r\n    \"admission_date\": \"2022-12-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification_type_id\": 2,\r\n    \"area_id\": 2,\r\n    \"surname\": \"MELO\",\r\n    \"second_surname\": \"PALACIOS\",\r\n    \"first_name\": \"KEVIN\",\r\n    \"other_names\": \"HUGO\",\r\n    \"identification_number\": \"8888888\",\r\n    \"country_id\": 2,\r\n    \"admission_date\": \"2022-12-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees/:id_employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						":id_employee"
+					],
+					"variable": [
+						{
+							"key": "id_employee",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/:employee_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						":employee_id"
+					],
+					"variable": [
+						{
+							"key": "employee_id",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
